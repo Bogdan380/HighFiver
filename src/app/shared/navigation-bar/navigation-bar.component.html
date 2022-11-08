@@ -1,0 +1,80 @@
+<div class="header" [class.sticky]="sticky">
+  <img
+    src="../../assets/static/header-logo.png"
+    class="logo"
+    (click)="goToHome()"
+  />
+  <div class="icons">
+    <img
+      src="../../assets/static/GiftBox.png"
+      class="icon"
+      (click)="goToAwards()"
+      *ngIf="showAwardsIcon"
+    />
+    <!-- <img
+      src="../../assets/static/Notification.png"
+      class="icon"
+      (click)="openModal('notifications-modal')"
+    /> -->
+    <img
+      [src]="imageUrl"
+      class="icon"
+      (click)="openModal('profile-modal')"
+      (error)="setDefaultPic()"
+    />
+  </div>
+</div>
+<app-modal id="profile-modal">
+  <div class="wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-x close"
+      viewBox="0 0 16 16"
+      (click)="closeModal('profile-modal')"
+    >
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <img [src]="imageUrl" class="icon-modal" />
+    <button
+      type="button"
+      class="secondary"
+      (click)="closeModal('profile-modal'); goToProfile()"
+    >
+      My Profile
+    </button>
+    <button type="button" class="primary" (click)="signOut()">Sign Out</button>
+  </div>
+</app-modal>
+<app-modal id="notifications-modal">
+  <div class="wrapper wrap_notif">
+    <div class="close_wrap">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        class="bi bi-x close_notification"
+        viewBox="0 0 16 16"
+        (click)="closeModal('notifications-modal')"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+        />
+      </svg>
+    </div>
+    <div class="notifications_banner">Notifications</div>
+    <div class="notification_wrapper">
+      Jane Doe gave you recognition 1 hour ago.
+    </div>
+    <div class="notification_wrapper">You have xy points to reedem.</div>
+    <div class="notification_wrapper">
+      Today is a great day to high-five your coleagues!
+    </div>
+    <div class="head_down"></div>
+  </div>
+</app-modal>

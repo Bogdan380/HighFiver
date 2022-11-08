@@ -1,0 +1,15 @@
+.container {
+  margin: 60px auto;
+  max-width: 1568px;
+}
+
+.p-top {
+  padding-top: 130px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 800;
+}

@@ -1,0 +1,212 @@
+<div class="welcome_card">
+  <h2 class="welcome_text">All Awards</h2>
+</div>
+<div class="options_row">
+  <div class="back-div">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-arrow-left-circle back"
+      viewBox="0 0 16 16"
+      (click)="goBack()"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+      />
+    </svg>
+  </div>
+  <h2
+    class="gifts_text"
+    style="padding-top: 20px"
+    [ngStyle]="{ display: flagResultsFilter ? 'block' : 'none' }"
+  >
+    Results by filter
+  </h2>
+  <h2
+    class="gifts_text"
+    style="padding-top: 20px"
+    [ngStyle]="{ display: flagAllAwards ? 'block' : 'none' }"
+  >
+    All awards
+  </h2>
+  <div>
+    <img
+      src="../../assets/static/search_icon.png"
+      class="slider_icon"
+      (click)="openModal('search-modal')"
+    />
+    <img
+      src="../../assets/static/slider_icon.png"
+      class="slider_icon"
+      (click)="openModal('filter-modal')"
+    />
+  </div>
+</div>
+<div>
+  <div class="gifts_display row mx-0 mb-5">
+    <div *ngFor="let award of awards" class="col-lg-4">
+      <div class="gift_card_2">
+        <img src="{{ award.imageUrl }}" class="gift_image" />
+        <br />
+        <h2 class="award_name">{{ award.name }}</h2>
+        <button
+          class="btn btn-primary choose_button"
+          [routerLink]="['/admin/edit', award.prodId]"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-primary delete_button"
+          (click)="delete(award.prodId)"
+        >
+          Delete
+        </button>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+  <div *ngIf="noAwardsFlag">
+    <h2 class="no_awards">
+      Unfortunately, there are no results for your search.
+    </h2>
+  </div>
+</div>
+
+<app-modal id="filter-modal">
+  <div class="wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-x close"
+      viewBox="0 0 16 16"
+      (click)="closeModal('filter-modal')"
+    >
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <div class="d-flex jusify-content-between" style="width: 550px">
+      <div class="dropdown">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+        >
+          Filter by category
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="filter_item">
+            <input
+              type="checkbox"
+              [(ngModel)]="filters[0].checked"
+              (change)="changeCheckboxAll()"
+              id="filter-checkbox"
+            />&nbsp;&nbsp;&nbsp;{{ filters[0].name }}
+          </li>
+          <span *ngFor="let filter of filters | slice: 1">
+            <li class="filter_item">
+              <input
+                type="checkbox"
+                [(ngModel)]="filter.checked"
+                (change)="changeCheckboxFilter()"
+                id="{{ filter.name }}"
+              />&nbsp;&nbsp;&nbsp;{{ filter.name }}
+            </li>
+          </span>
+        </ul>
+      </div>
+      <button class="btn btn-primary search_button" (click)="onFilterSubmit()">
+        Filter
+      </button>
+    </div>
+  </div>
+</app-modal>
+<app-modal id="search-modal">
+  <div class="wrapper">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-x close"
+      viewBox="0 0 16 16"
+      (click)="closeModal('search-modal')"
+    >
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <div class="d-flex jusify-content-between" style="width: 450px">
+      <div class="input-group rounded" style="width: 250px">
+        <input
+          [(ngModel)]="searchTerm"
+          type="search"
+          class="form-control rounded"
+          style="
+            width: 200px;
+            margin-left: 50px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+          "
+          placeholder="Search for award"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary search_button"
+        (click)="onSearchSubmit()"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</app-modal>
+<app-modal id="delete-modal">
+  <div class="delete-wrapper">
+    <div class="d-flex justify-content-between col-lg-12 upper_box">
+      <h2 class="text">Are you sure?</h2>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="30"
+        fill="currentColor"
+        class="bi bi-x close-delete"
+        viewBox="0 0 16 16"
+        (click)="closeModal('delete-modal')"
+      >
+        <path
+          d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+        />
+      </svg>
+    </div>
+    <div class="central_box">
+      <p class="delete-text">
+        You have chosen this Award. Click on Delete button if you want to delete
+        it.
+      </p>
+    </div>
+    <div class="d-flex justify-content-end button_box col-lg-12">
+      <button
+        class="btn btn-outline-secondary cancel-button"
+        (click)="closeModal('delete-modal')"
+      >
+        Cancel
+      </button>
+      <button
+        class="btn btn-primary proceed-button"
+        (click)="closeModal('delete-modal'); deleteAward()"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</app-modal>
+<router-outlet></router-outlet>

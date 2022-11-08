@@ -1,0 +1,200 @@
+.rewards-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58rem;
+  height: 10rem;
+  background-color: #ffde6c;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  font-family: "Roboto Condensed";
+  font-size: 3rem;
+  color: #383e42;
+  text-align: center;
+  line-height: 10rem;
+}
+
+.reward_wrapper {
+  width: 58rem;
+}
+
+.reward {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-top: 3rem;
+}
+
+.button_wrapper {
+  width: 58rem;
+}
+
+.admin_buttons {
+  width: 44rem;
+  height: 6.5rem;
+  background-color: rgba(255, 222, 108, 50%);
+  border-radius: 2.5rem;
+  border: none;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  text-align: center;
+  color: #383e42;
+  padding-top: 1.8rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  display: block;
+  margin-top: 4.5rem;
+}
+
+.save_button {
+  background-color: #8b293c;
+  border: none;
+  margin-left: 5rem;
+}
+
+.button_row {
+  width: 58rem;
+  margin-top: 2rem;
+}
+
+.input_box {
+  width: 58rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+
+.input_table {
+  width: 100%;
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+}
+
+.name_value_input {
+  width: 25rem;
+  height: 3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  background-color: rgba(255, 222, 108, 50%);
+  border: none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem;
+}
+
+.desc_input {
+  width: 25rem;
+  height: 11rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  background-color: rgba(255, 222, 108, 50%);
+  border: none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  position: relative;
+  padding-top: 1rem;
+  line-height: 2rem;
+  resize: none;
+  margin: 0.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter_item {
+  font-size: 1rem;
+  font-family: "Roboto Condensed";
+  height: 3rem;
+  padding-left: 1.3rem;
+  padding-top: 0.5rem;
+}
+
+.dropdown-menu {
+  height: 12rem !important;
+  width: 15rem !important;
+  border-radius: 1rem;
+}
+
+.dropdown-toggle {
+  width: 25rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: rgba(255, 222, 108, 50%);
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  color: #383e42 !important;
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.dropdown-toggle:focus {
+  background-color: rgba(255, 222, 108, 50%);
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  border: none;
+}
+
+.input_name {
+  padding-left: 3.5rem;
+  width: 25rem;
+}
+
+.photo_button {
+  width: 25rem;
+  height: 3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  background-color: rgb(255, 222, 108);
+  border: none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem;
+  font: inherit;
+  padding-top: 1.2rem;
+  color: #383e42;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.error_looks {
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+  color: #8b293c;
+  margin-top: 1rem;
+  margin-left: 3.5rem;
+}
+
+::-webkit-file-upload-button {
+  width: 15rem;
+  height: 3.5rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  background-color: rgb(255, 222, 108);
+  border: none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem;
+  font: inherit;
+  color: #383e42;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+.back {
+  position: absolute;
+  left: 5%;
+  top: 36%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.back:hover {
+  transform: scale(1.15);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

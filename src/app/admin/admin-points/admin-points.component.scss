@@ -1,0 +1,156 @@
+.points-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58rem;
+  height: 10rem;
+  background-color: #ffde6c;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 15px -10px;
+  font-family: "Roboto Condensed";
+  font-size: 3rem;
+  color: #383e42;
+  text-align: center;
+  line-height: 10rem;
+}
+
+.reward_wrapper {
+  width: 58rem;
+}
+
+.reward {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-top: 3rem;
+}
+
+.button_wrapper {
+  width: 58rem;
+}
+
+.admin_buttons {
+  width: 44rem;
+  height: 6.5rem;
+  background-color: rgba(255, 222, 108, 50%);
+  border-radius: 2.5rem;
+  border: none;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  text-align: center;
+  color: #383e42;
+  padding-top: 1.8rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  display: block;
+  margin-top: 4.5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  color: black;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  width: 30rem;
+  height: 14rem;
+  position: fixed;
+  top: 30rem;
+  left: 54rem;
+}
+
+.wrapper_small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  color: black;
+  background: #fff;
+  border-radius: 1rem;
+  width: 28rem;
+  height: 8rem;
+  position: fixed;
+  top: 30rem;
+  left: 54rem;
+  padding-top: 2rem;
+}
+
+.text {
+  font-family: inherit;
+  margin-bottom: 1rem;
+}
+
+.upper_box {
+  margin-top: 2rem;
+  height: 2rem;
+}
+
+.central_box {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.central_box_no_border {
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.points_input {
+  width: 12rem;
+  height: 2rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  margin-right: 1.5rem;
+  border: 1px solid #ccc;
+}
+
+.proceed_button {
+  background-color: #8b293c;
+  border: none;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.3rem 1.6rem;
+}
+
+.button_box {
+  padding: 0.7rem;
+}
+
+.popup {
+  width: 38rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.back {
+  position: absolute;
+  left: 5%;
+  top: 36%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.back:hover {
+  transform: scale(1.15);
+}
+
+.close {
+  border-radius: 50%;
+}
+
+.close:hover {
+  background-color: #ccc;
+}

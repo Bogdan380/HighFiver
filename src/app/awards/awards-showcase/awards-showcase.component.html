@@ -1,0 +1,345 @@
+<div class="welcome_card">
+  <h2 class="welcome_text">AWARDS</h2>
+</div>
+<div class="options_row d-flex justify-content-between">
+  <div
+    class="emptyBox"
+    [ngStyle]="{ display: flagEmptyBox ? 'block' : 'none' }"
+  ></div>
+  <h2
+    class="gifts_text"
+    style="padding-top: 20px"
+    [ngStyle]="{ display: flagResultsFilter ? 'block' : 'none' }"
+  >
+    Results by filter
+  </h2>
+  <h2
+    class="gifts_text"
+    style="padding-top: 20px"
+    [ngStyle]="{ display: flagAllAwards ? 'block' : 'none' }"
+  >
+    All awards
+  </h2>
+  <img
+    [ngStyle]="{ display: flagVoucher ? 'block' : 'none' }"
+    src="../../assets/static/voucher_icon.png"
+    class="voucher_icon"
+  />
+  <div>
+    <img
+      src="../../assets/static/search_icon.png"
+      class="slider_icon"
+      (click)="openModal('search-modal')"
+    />
+    <img
+      src="../../assets/static/slider_icon.png"
+      class="slider_icon"
+      (click)="openModal('filter-modal')"
+    />
+  </div>
+</div>
+<div
+  class="gifts_wrapper"
+  [ngStyle]="{ display: flagDisplay ? 'block' : 'none' }"
+>
+  <div class="d-flex justify-content-between gifts-heading">
+    <h2 class="gifts_text">Gift cards</h2>
+    <p class="view_text" (click)="displayCustom(1)">View all</p>
+  </div>
+  <div class="gifts_slider d-flex justify-content-between">
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_left.png"
+        width="20px"
+        height="20px"
+        (click)="turnLeft(0)"
+        class="arrow-img"
+      />
+    </div>
+    <div *ngFor="let giftcard of listings[0]; let indexOfelement = index">
+      <div
+        *ngIf="indexOfelement >= lower[0] && higher[0] >= indexOfelement"
+        class="gift_card"
+      >
+        <img src="{{ giftcard.imageUrl }}" class="gift_image" />
+        <br />
+        <p class="gift_name">{{ giftcard.name }}</p>
+        <button
+          class="btn btn-primary choose_button"
+          [routerLink]="['/award', giftcard.prodId]"
+          id="{{ giftcard.name }}"
+        >
+          Redeem
+        </button>
+      </div>
+    </div>
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_right.png"
+        width="20px"
+        height="20px"
+        (click)="turnRight(0)"
+        class="arrow-img"
+      />
+    </div>
+  </div>
+</div>
+<div
+  class="gifts_wrapper"
+  [ngStyle]="{ display: flagDisplay ? 'block' : 'none' }"
+>
+  <div class="d-flex justify-content-between" style="width: 100%">
+    <h2 class="gifts_text">Company store</h2>
+    <p class="view_text" (click)="displayCustom(2)">View all</p>
+  </div>
+  <div class="gifts_slider d-flex justify-content-between">
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_left.png"
+        width="20px"
+        height="20px"
+        (click)="turnLeft(1)"
+        class="arrow-img"
+      />
+    </div>
+    <div *ngFor="let compstore of listings[1]; let indexOfelement = index">
+      <div
+        *ngIf="indexOfelement >= lower[1] && higher[1] >= indexOfelement"
+        class="gift_card"
+      >
+        <img src="{{ compstore.imageUrl }}" class="gift_image" />
+        <br />
+        <p class="gift_name">{{ compstore.name }}</p>
+        <button
+          class="btn btn-primary choose_button"
+          [routerLink]="['/award', compstore.prodId]"
+          id="{{ compstore.name }}"
+        >
+          Redeem
+        </button>
+      </div>
+    </div>
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_right.png"
+        width="20px"
+        height="20px"
+        (click)="turnRight(1)"
+        class="arrow-img"
+      />
+    </div>
+  </div>
+</div>
+<div
+  class="gifts_wrapper"
+  [ngStyle]="{ display: flagDisplay ? 'block' : 'none' }"
+>
+  <div class="d-flex justify-content-between" style="width: 100%">
+    <h2 class="gifts_text">Clothes</h2>
+    <p class="view_text" (click)="displayCustom(3)">View all</p>
+  </div>
+  <div class="gifts_slider d-flex justify-content-between">
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_left.png"
+        width="20px"
+        height="20px"
+        (click)="turnLeft(2)"
+        class="arrow-img"
+      />
+    </div>
+    <div *ngFor="let cloth of listings[2]; let indexOfelement = index">
+      <div
+        *ngIf="indexOfelement >= lower[2] && higher[2] >= indexOfelement"
+        class="gift_card"
+      >
+        <img src="{{ cloth.imageUrl }}" class="gift_image" />
+        <br />
+        <p class="gift_name">{{ cloth.name }}</p>
+        <button
+          class="btn btn-primary choose_button"
+          [routerLink]="['/award', cloth.prodId]"
+          id="{{ cloth.name }}"
+        >
+          Redeem
+        </button>
+      </div>
+    </div>
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_right.png"
+        width="20px"
+        height="20px"
+        (click)="turnRight(2)"
+        class="arrow-img"
+      />
+    </div>
+  </div>
+</div>
+<div
+  class="gifts_wrapper"
+  [ngStyle]="{ display: flagDisplay ? 'block' : 'none' }"
+>
+  <div class="d-flex justify-content-between" style="width: 100%">
+    <h2 class="gifts_text">Charity</h2>
+    <p class="view_text" (click)="displayCustom(4)">View all</p>
+  </div>
+  <div class="gifts_slider d-flex justify-content-between">
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_left.png"
+        width="20px"
+        height="20px"
+        (click)="turnLeft(3)"
+        class="arrow-img"
+      />
+    </div>
+    <div *ngFor="let char of listings[3]; let indexOfelement = index">
+      <div
+        *ngIf="indexOfelement >= lower[3] && higher[3] >= indexOfelement"
+        class="gift_card"
+      >
+        <img src="{{ char.imageUrl }}" class="gift_image" />
+        <br />
+        <p class="gift_name">{{ char.name }}</p>
+        <button
+          class="btn btn-primary choose_button"
+          [routerLink]="['/award', char.prodId]"
+          id="{{ char.name }}"
+        >
+          Redeem
+        </button>
+      </div>
+    </div>
+    <div class="arrow">
+      <img
+        src="../../assets/static/arrow_right.png"
+        width="20px"
+        height="20px"
+        (click)="turnRight(3)"
+        class="arrow-img"
+      />
+    </div>
+  </div>
+</div>
+<div [ngStyle]="{ display: flagFilter ? 'block' : 'none' }">
+  <div class="gifts_display row mx-0">
+    <div *ngFor="let award of awards" class="col-lg-4">
+      <div class="gift_card_2" id="{{ award.name }}">
+        <img src="{{ award.imageUrl }}" class="gift_image ml-small" />
+        <br />
+        <h2 class="award_name">{{ award.name }}</h2>
+        <button
+          class="btn btn-primary choose_button ml-medium"
+          [routerLink]="['/award', award.prodId]"
+          id="{{ award.name }}"
+        >
+          Redeem
+        </button>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+  <div *ngIf="noAwardsFlag">
+    <h2 class="no_awards">
+      Unfortunately, there are no results for your search.
+    </h2>
+  </div>
+</div>
+
+<app-modal id="filter-modal">
+  <div class="wrapper pb-small">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-x close mr-small"
+      viewBox="0 0 16 16"
+      (click)="closeModal('filter-modal')"
+    >
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <div class="d-flex jusify-content-between" style="width: 550px">
+      <div class="dropdown mr-small">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-toggle="dropdown"
+        >
+          Filter by category
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li class="filter_item">
+            <input
+              type="checkbox"
+              [(ngModel)]="filters[0].checked"
+              (change)="changeCheckboxAll()"
+              id="filter-checkbox"
+            />&nbsp;&nbsp;&nbsp;{{ filters[0].name }}
+          </li>
+          <span *ngFor="let filter of filters | slice: 1">
+            <li class="filter_item">
+              <input
+                type="checkbox"
+                [(ngModel)]="filter.checked"
+                (change)="changeCheckboxFilter()"
+                id="{{ filter.name }}"
+              />&nbsp;&nbsp;&nbsp;{{ filter.name }}
+            </li>
+          </span>
+        </ul>
+      </div>
+      <button class="btn btn-primary search_button" (click)="onFilterSubmit()">
+        Filter
+      </button>
+    </div>
+  </div>
+</app-modal>
+<app-modal id="search-modal">
+  <div class="wrapper pb-small">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="currentColor"
+      class="bi bi-x close mr-small"
+      viewBox="0 0 16 16"
+      (click)="closeModal('search-modal')"
+    >
+      <path
+        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+      />
+    </svg>
+    <div class="d-flex jusify-content-between" style="width: 450px">
+      <div class="input-group rounded" style="width: 250px">
+        <input
+          [(ngModel)]="searchTerm"
+          type="search"
+          class="form-control rounded"
+          style="
+            width: 200px;
+            margin-left: 50px;
+            margin-right: 20px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+          "
+          placeholder="Search for award"
+          aria-label="Search"
+          aria-describedby="search-addon"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary search_button"
+        (click)="onSearchSubmit()"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</app-modal>
+<router-outlet></router-outlet>

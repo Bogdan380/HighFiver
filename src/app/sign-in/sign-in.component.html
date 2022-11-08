@@ -1,0 +1,43 @@
+<div
+  class="container-fluid h-100 wrapper"
+  style="background: #ffde6c"
+  (click)="refreshPage()"
+>
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container justify-content-center">
+          <img src="../../assets/static/HighFiverLogo.png" class="brand_logo" />
+          <div class="signtext">
+            <p>Please sign in</p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="button_container justify-content-center">
+          <div class="google-button">
+            <mat-card class="cardStyle">
+              <div id="buttonDiv"></div>
+            </mat-card>
+          </div>
+
+          <div style="text-align: center; margin-top: 10px">
+            <p>
+              By submitting this form you agree to our
+              <a href="#">Terms & Conditions</a> and
+              <a href="#">Privacy Policy</a>
+            </p>
+            <div class="alert alert-danger error" role="alert" *ngIf="error">
+              {{ errorMessage }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="moto_container justify-content-center">
+          <p class="moto_text">Let's give each other a high five!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

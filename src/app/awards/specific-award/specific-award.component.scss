@@ -1,0 +1,135 @@
+.award_wrapper {
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  color: #383e4a;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.photo_bubble {
+  width: 14rem;
+  height: 14rem;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  box-shadow: inherit;
+  margin: auto;
+}
+
+.money_money_money {
+  width: 16rem;
+  height: 3.6rem;
+  background-color: rgba(255, 222, 108, 60%);
+  border-radius: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  box-shadow: inherit;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.must_be_funny {
+  margin: 0.25rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.in_the_rich_mans_world {
+  font-family: inherit;
+  height: 3.6rem;
+  padding-top: 0.7rem;
+  font-size: 2.4rem;
+  padding-left: 3.4rem;
+  margin-bottom: 2px;
+}
+
+.desc_wrapper {
+  box-shadow: inherit;
+  width: 38rem;
+  background-color: rgba(255, 222, 108, 60%);
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  margin: auto;
+}
+
+.award_name {
+  font-family: inherit;
+  font-size: 2rem;
+  color: #8b293c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.award_desc {
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: #383e4a;
+  text-align: justify;
+  line-height: 1.6rem;
+}
+
+.pick_button {
+  background-color: #8b293c;
+  border: none;
+  width: 12rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  color: black;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 1rem;
+  width: 30rem;
+  height: 12rem;
+  position: fixed;
+  top: 40rem;
+  left: 54rem;
+}
+
+.text {
+  font-family: inherit;
+}
+
+.upper_box {
+  padding-top: 1rem;
+}
+
+.central_box {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 1rem;
+  padding-top: 1.5rem;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.proceed_button {
+  background-color: #8b293c;
+  border: none;
+  margin-left: 1rem;
+}
+
+.button_box {
+  padding: 0.7rem;
+}
+
+.popup {
+  width: 38rem;
+  margin: auto;
+  margin-top: 1rem;
+}

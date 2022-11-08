@@ -1,0 +1,15 @@
+<div class="container" [class.p-top]="sticky" (click)="refreshPage()">
+  <app-navigation-bar></app-navigation-bar>
+  <div class="row">
+    <div class="col-lg-4">
+      <app-user-card></app-user-card>
+      <br /><br /><br />
+      <app-celebrations></app-celebrations>
+    </div>
+    <div class="col-lg-8">
+      <app-user-data-display></app-user-data-display>
+      <br /><br /><br />
+      <!-- <app-activity-track></app-activity-track> -->
+    </div>
+  </div>
+</div>

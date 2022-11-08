@@ -1,0 +1,302 @@
+body {
+  font-family: "Roboto Condensed";
+}
+
+.welcome_card {
+  width: 927px;
+  height: 162px;
+  background-color: #ffde6c;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+}
+
+.emptyBox {
+  width: 100px;
+  height: 100px;
+}
+
+.welcome_text {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  font-size: 48px;
+  color: #383e42;
+  text-align: center;
+  line-height: 162px;
+}
+
+.options_row {
+  width: 927px;
+  height: 140px;
+  padding: 20px;
+}
+
+.slider_icon {
+  width: 30px;
+  height: 30px;
+  margin: 35px;
+}
+
+.gifts_wrapper {
+  width: 58rem;
+  height: 22.5rem;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 2rem;
+}
+
+.gifts-heading {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 8px;
+}
+
+.gift_card {
+  width: 11rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.gift_card_2 {
+  width: 13rem;
+  margin-left: 2rem;
+  margin-right: 0rem;
+  margin-top: 2rem;
+}
+
+.gift_name {
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  color: #383e42;
+  margin: 0.4rem 0 0.5rem 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gifts_text {
+  font-family: "Roboto Condensed";
+  font-size: 40px;
+  color: #383e42;
+  line-height: 56px;
+}
+
+.arrow {
+  width: 16px;
+  height: 255px;
+  padding-top: 77px;
+}
+
+.shop_content {
+  width: 855px;
+}
+
+.choose_button {
+  background-color: #8b293c;
+  border: none;
+  width: 115px;
+  height: 32px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+  margin: 4px 0 8px 28px;
+}
+
+.gift_image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.voucher_icon {
+  margin-left: 130px;
+}
+
+.slider_icon:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  width: 441px;
+  height: 100px;
+  position: fixed;
+  top: 474px;
+  left: 1000px;
+}
+
+.close {
+  align-self: end;
+  margin-right: 40px;
+  border-radius: 50%;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.primary {
+  width: 115px;
+  height: 32px;
+  background-color: #8b293c;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  margin: 12px 0;
+  transition: all 0.3s;
+}
+
+.primary:hover {
+  transform: scale(1.1);
+}
+
+.secondary {
+  background-color: #ffde6c;
+  border-radius: 20px;
+  border: none;
+  width: 257px;
+  height: 51px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #383e42;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.secondary:hover {
+  transform: scale(1.05);
+}
+
+.icon-modal {
+  margin-bottom: 48px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.line {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.flex-container {
+  display: flex;
+  gap: 112px;
+}
+
+.spacing {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+.filter_item {
+  font-size: 18px;
+  font-family: "Roboto Condensed";
+  height: 48px;
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.dropdown-menu {
+  height: 242px !important;
+  width: 219px !important;
+  border-radius: 10px;
+}
+
+.dropdown-toggle {
+  width: 200px !important;
+  height: 38px !important;
+  border-radius: 10px;
+  background-color: white !important;
+  color: #383e42 !important;
+  border-color: #8b293c;
+  font-size: 16px;
+  font-family: "Roboto Condensed";
+  text-align: left;
+  tab-size: 2;
+  margin-left: 100px;
+}
+
+.dropdown-toggle:focus {
+  color: #8b293c;
+}
+
+.search_button {
+  background-color: #8b293c;
+  border: none;
+  width: 100px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.award_name {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.no_awards {
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+  color: #8b293c;
+  margin-left: 1.2rem;
+}
+
+.view_text {
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  color: rgb(37, 138, 201);
+  margin-top: 1rem;
+  margin-right: 1rem;
+  transition: all 0.2s;
+}
+
+.view_text:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.arrow-img {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.arrow-img:hover {
+  transform: scale(1.2);
+}
+
+.ml-small {
+  margin-left: 18px;
+}
+
+.ml-medium {
+  margin-left: 46px;
+}
+
+.mr-small {
+  margin-right: 1rem;
+}
+
+.pb-small {
+  padding-bottom: 0.8rem;
+}

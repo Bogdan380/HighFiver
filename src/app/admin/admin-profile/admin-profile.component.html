@@ -1,0 +1,13 @@
+<div class="container" [class.p-top]="sticky" (click)="refreshPage()">
+  <app-navigation-bar [showAwardsIcon]="false"></app-navigation-bar>
+  <div class="row">
+    <div class="col-lg-4">
+      <app-admin-sidebar></app-admin-sidebar>
+      <br /><br /><br />
+      <app-celebrations></app-celebrations>
+    </div>
+    <div class="col-lg-8">
+      <app-user-data-display></app-user-data-display>
+    </div>
+  </div>
+</div>

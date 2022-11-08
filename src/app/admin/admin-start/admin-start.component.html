@@ -1,0 +1,30 @@
+<div class="container" [class.p-top]="sticky" (click)="refreshPage()">
+  <app-navigation-bar [showAwardsIcon]="false"></app-navigation-bar>
+  <div class="row">
+    <div class="col-lg-4">
+      <app-admin-sidebar></app-admin-sidebar>
+      <br /><br /><br />
+      <app-celebrations></app-celebrations>
+    </div>
+    <div class="col-lg-8">
+      <div class="admin-header">Administration</div>
+      <div class="flex-container">
+        <img src="../../../assets/static/admin.png" class="admin-img" />
+        <div class="navigate" (click)="navigateToRewards()">
+          <span class="navigate-text"> Rewards administration</span>
+          <img
+            src="../../../assets/static/reward.png"
+            class="navigate-icon mb-small"
+          />
+        </div>
+        <div class="navigate" (click)="navigateToPoints()">
+          <span class="navigate-text mr-small"> Points administration</span>
+          <img
+            src="../../../assets/static/money_bag.png"
+            class="navigate-icon"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

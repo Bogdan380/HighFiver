@@ -1,0 +1,103 @@
+<div class="rewards_header">Rewards Administration</div>
+<div *ngIf="error">
+  <h2 id="errorText" class="error_looks">{{ errorText }}</h2>
+</div>
+<div class="input_wrapper">
+  <div class="input_box">
+    <table class="input_table">
+      <tr>
+        <td class="input_name">Photo</td>
+        <td>
+          <input
+            type="file"
+            id="myFile"
+            name="filename"
+            accept=".png"
+            placeholder="Choose photo to upload"
+            (change)="onFileSelected($event)"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Award name</td>
+        <td>
+          <input
+            id="award_name"
+            type="text"
+            class="name_value_input"
+            maxlength="20"
+            [(ngModel)]="award.name"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Value</td>
+        <td>
+          <input
+            id="award_value"
+            type="number"
+            class="name_value_input"
+            min="1"
+            max="100"
+            [(ngModel)]="award.points"
+            step="0.01"
+            onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">About award</td>
+        <td>
+          <textarea
+            id="award_desc"
+            type="text"
+            class="desc_input"
+            cols="90"
+            rows="4"
+            [(ngModel)]="award.details"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Category</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              data-toggle="dropdown"
+            >
+              {{ award.group.groupName }}
+              <span
+                style="float: right; margin-right: 2rem"
+                class="caret"
+              ></span>
+            </button>
+            <ul class="dropdown-menu">
+              <span *ngFor="let filter of filters; let indexOfelement = index">
+                <li class="filter_item">
+                  <input
+                    id="{{ filter.name }}"
+                    type="radio"
+                    name="filter"
+                    value="{{ indexOfelement }}"
+                    (change)="onFilterChange($event)"
+                  />&nbsp;&nbsp;&nbsp;{{ filter.name }}
+                </li>
+              </span>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="button_row d-flex justify-content-center">
+    <div class="btn btn-outline-secondary" [routerLink]="['/admin/all']">
+      Cancel
+    </div>
+    <div class="btn btn-success save_button" (click)="persistAward()">
+      Save changes
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

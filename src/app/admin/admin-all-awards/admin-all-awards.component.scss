@@ -1,0 +1,363 @@
+body {
+  font-family: "Roboto Condensed";
+}
+
+.welcome_card {
+  width: 927px;
+  height: 162px;
+  background-color: #ffde6c;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+}
+
+.emptyBox {
+  width: 100px;
+  height: 100px;
+}
+
+.welcome_text {
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  font-size: 48px;
+  color: #383e42;
+  text-align: center;
+  line-height: 162px;
+}
+
+.options_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 927px;
+  height: 140px;
+  padding: 20px;
+}
+
+.slider_icon {
+  width: 30px;
+  height: 30px;
+  margin: 35px;
+}
+
+.gifts_wrapper {
+  width: 927px;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 2rem;
+}
+
+.gift_card_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  margin: 2.2rem 2.5rem 0 2.5rem;
+}
+
+.gift_name {
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  color: #383e42;
+  margin-bottom: 0rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.gifts_text {
+  font-family: "Roboto Condensed";
+  font-size: 40px;
+  color: #383e42;
+  line-height: 56px;
+}
+
+.arrow {
+  width: 16px;
+  height: 255px;
+  padding-top: 77px;
+}
+
+.shop_content {
+  width: 855px;
+}
+
+.choose_button {
+  background-color: #8b293c;
+  border: none;
+  width: 115px;
+  height: 32px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+}
+
+.delete_button {
+  background-color: #ffde6c;
+  color: #8b293c;
+  font-weight: bold;
+  border: none;
+  width: 115px;
+  height: 32px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 14px;
+}
+
+.gift_image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.voucher_icon {
+  margin-left: 130px;
+}
+
+.slider_icon {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.slider_icon:hover {
+  transform: scale(1.2);
+}
+
+.close-delete {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  border-radius: 50%;
+}
+
+.close-delete:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.close {
+  position: absolute;
+  top: 8%;
+  right: 2%;
+  border-radius: 50%;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: #ddd;
+}
+
+.primary {
+  width: 115px;
+  height: 32px;
+  background-color: #8b293c;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  margin: 12px 0;
+  transition: all 0.3s;
+}
+
+.primary:hover {
+  transform: scale(1.1);
+}
+
+.secondary {
+  background-color: #ffde6c;
+  border-radius: 20px;
+  border: none;
+  width: 257px;
+  height: 51px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: #383e42;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.secondary:hover {
+  transform: scale(1.05);
+}
+
+.icon-modal {
+  margin-bottom: 48px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.line {
+  display: block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.flex-container {
+  display: flex;
+  gap: 112px;
+}
+
+.spacing {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+.filter_item {
+  font-size: 18px;
+  font-family: "Roboto Condensed";
+  height: 48px;
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.dropdown-menu {
+  height: 242px !important;
+  width: 219px !important;
+  border-radius: 10px;
+}
+
+.dropdown-toggle {
+  width: 200px !important;
+  height: 38px !important;
+  border-radius: 10px;
+  background-color: white !important;
+  color: #383e42 !important;
+  border-color: #8b293c;
+  font-size: 16px;
+  font-family: "Roboto Condensed";
+  text-align: left;
+  tab-size: 2;
+  margin-left: 100px;
+}
+
+.dropdown-toggle:focus {
+  color: #8b293c;
+}
+
+.search_button {
+  background-color: #8b293c;
+  border: none;
+  width: 100px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  margin: 0 2rem;
+}
+
+.award_name {
+  font-family: "Roboto Condensed";
+  font-size: 18px;
+  text-align: center;
+  line-height: 18px;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.no_awards {
+  font-family: "Roboto Condensed";
+  font-size: 1.5rem;
+  color: #8b293c;
+  margin-left: 1.2rem;
+}
+
+.view_text {
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  color: rgb(37, 138, 201);
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Condensed";
+  color: black;
+  background: #fff;
+  border-radius: 1rem;
+  width: 30rem;
+  height: 6rem;
+  position: fixed;
+  top: 30rem;
+  left: 54rem;
+  padding-top: 0.7rem;
+}
+
+.delete-wrapper {
+  position: relative;
+  font-family: "Roboto Condensed";
+  color: black;
+  background: #fff;
+  border-radius: 1rem;
+  width: 30rem;
+  height: 11rem;
+  position: fixed;
+  top: 30rem;
+  left: 54rem;
+  padding-bottom: 1rem;
+}
+
+.text {
+  font-family: inherit;
+}
+
+.upper_box {
+  height: 3rem;
+  padding-top: 0.7rem;
+}
+
+.central_box {
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  padding: 1.4rem 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+.cancel-button {
+  padding: 0.2rem 1.2rem;
+}
+
+.proceed-button {
+  background-color: #8b293c;
+  border: none;
+  margin-left: 1.5rem;
+  padding: 0.2rem 1.3rem;
+}
+
+.button_box {
+  padding: 0.8rem 1.5rem 0rem 0rem;
+}
+
+.popup {
+  width: 38rem;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.back-div {
+  padding-left: 1rem;
+}
+
+.back {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.back:hover {
+  transform: scale(1.2);
+}
+
+.delete-text {
+  margin: 0;
+  font-size: 15px;
+}

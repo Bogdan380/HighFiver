@@ -1,0 +1,11 @@
+<div class="container" [class.p-top]="sticky" (click)="refreshPage()">
+  <app-navigation-bar [showAwardsIcon]="false"></app-navigation-bar>
+  <div class="row">
+    <div class="col-lg-4">
+      <app-admin-sidebar></app-admin-sidebar>
+    </div>
+    <div class="col-lg-8">
+      <app-admin-points></app-admin-points>
+    </div>
+  </div>
+</div>

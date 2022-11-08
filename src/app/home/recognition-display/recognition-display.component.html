@@ -1,0 +1,22 @@
+<div class="display_wrapper" *ngFor="let recognition of recognitionsToShow">
+  <h1>
+    <span class="h1-text"
+      >{{ recognition.user_to_name }} received a recognition from
+      {{ recognition.user_from_name }}!</span
+    >
+    <span class="points">
+      + <span class="points-inner">{{ recognition.points }} </span>points</span
+    >
+  </h1>
+  <p>
+    {{ recognition.content }}
+  </p>
+  <p class="date">{{ recognition.created_at }}</p>
+</div>
+<mat-paginator
+  class="paginator"
+  (page)="onPageChange($event)"
+  [length]="recognitionsLength"
+  [pageSize]="5"
+>
+</mat-paginator>

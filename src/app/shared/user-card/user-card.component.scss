@@ -1,0 +1,84 @@
+.user_card {
+  width: 25rem;
+  height: 25.25rem;
+  background-color: #ffde6c;
+  border-radius: 40px;
+  padding-top: 38px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+}
+
+.user_card_row {
+  width: 100%;
+}
+
+.user_photo {
+  width: 105px;
+  height: 100px;
+}
+
+.points {
+  margin-top: 52px;
+  width: 333px;
+  height: 64px;
+  background-color: none;
+}
+
+.points_cloud {
+  padding: 1.4rem 0rem;
+  width: 150px;
+  height: 64px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  text-shadow: none !important;
+  background-color: white;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  color: #383e42;
+  text-align: center;
+  text-shadow: 2px 2px 8px #383e42;
+}
+
+.pick_button {
+  background-color: #8b293c;
+  border: none;
+  width: 183px;
+  height: 38px;
+  border-radius: 10px;
+  font-family: "Roboto Condensed";
+  font-size: 1rem;
+  margin-top: 3.5rem;
+  transition: all 0.3s;
+}
+
+.pick_button:hover {
+  transform: scale(1.1);
+}
+
+.m-top {
+  margin-top: 2rem;
+}
+
+.points-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.points-text {
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.points-number {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.redeem {
+  color: #006a4e;
+}
+
+.give {
+  color: #8b293c;
+}

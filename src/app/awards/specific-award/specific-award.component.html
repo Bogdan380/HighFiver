@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-lg-1">
+
+    </div>
+    <div class="award_wrapper col-lg-10">
+        <div class="photo_bubble">
+            
+            <img src={{award.imageUrl}} class="photo_bubble">
+        </div>
+        <div class="money_money_money d-flex justify-content-begin">
+            <img src="../../assets/static/money_bag.png" class="must_be_funny">
+            <div class="in_the_rich_mans_world">
+                {{award.points}}
+            </div>
+        </div>
+        <div class="desc_wrapper">
+            <h2 class="award_name">{{award.name}}</h2>
+            <p class="award_desc">{{award.details}} </p>
+        </div>
+        <div *ngIf="notEnoughTokens" id="not_enough" class="alert alert-danger alert-dismissible fade show popup" role="alert">
+            You have to collect more recognitions to be able to redeem this award! Check out other awards.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="deleteNotEnoughFlag()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div *ngIf="moreThanEnoughTokens" id="enough" class="alert alert-success alert-dismissible fade show popup" role="alert">
+            Congratulations! You've just got your award!  All the shipping info will be sent to your email.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="deleteSuccessfulFlag()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="button_wrapper d-flex justify-content-center">
+            <button class="btn btn-primary pick_button" (click)="openModal('points-modal')">Pick award</button>
+        </div>
+    </div>
+    
+</div>
+<app-modal id="points-modal">
+    <div class="wrapper">
+        <div class="d-flex justify-content-between col-lg-12 upper_box">
+            <h2 class="text">Are you sure?</h2>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-x close"
+                viewBox="0 0 16 16"
+                (click)="closeModal('points-modal')"
+            >
+                <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+                />
+            </svg>
+        </div>
+        <div class="central_box">
+            <p>You have chosen this Award. Click on Proceed button if you want to finish.</p>
+        </div>
+        <div class="d-flex justify-content-end button_box col-lg-12">
+            <button class="btn btn-outline-secondary" (click)="closeModal('points-modal')">Cancel</button>
+            <button class="btn btn-primary proceed_button" (click)="commitTransaction()">Proceed</button>
+        </div>
+    </div>
+</app-modal>

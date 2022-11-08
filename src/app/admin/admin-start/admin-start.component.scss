@@ -1,0 +1,80 @@
+body {
+  font-family: "Roboto Condensed";
+}
+
+.container {
+  margin: 60px auto;
+  max-width: 1568px;
+}
+
+.p-top {
+  padding-top: 130px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  z-index: 800;
+}
+
+.navigate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 40rem;
+  height: 6rem;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  background-color: rgba(255, 222, 108, 50%);
+  border-radius: 2rem;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  margin-right: 2rem;
+  color: #383e42;
+  margin-bottom: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-right: 4rem;
+}
+
+.admin-header {
+  width: 58rem;
+  height: 10rem;
+  background-color: #ffde6c;
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  font-family: "Roboto Condensed";
+  font-size: 3rem;
+  color: #383e42;
+  text-align: center;
+  line-height: 10rem;
+}
+
+.admin-img {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin-bottom: 1rem;
+}
+
+.navigate-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.mr-small {
+  margin-right: 2rem;
+}
+
+.mb-small {
+  margin-bottom: 0.5rem;
+}

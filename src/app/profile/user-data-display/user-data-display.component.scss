@@ -1,0 +1,39 @@
+.welcome_card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58rem;
+  height: 10rem;
+  background-color: #ffde6c;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  padding-top: 1rem;
+}
+
+.welcome_text {
+  font-family: "Roboto Condensed";
+  font-size: 48px;
+  color: #383e42;
+  text-align: center;
+}
+
+.details_card {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  text-align: start;
+  font-size: 22px;
+  line-height: 1.2;
+  width: 58rem;
+  height: 12rem;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 15px -10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  margin-top: 3rem;
+}
+
+.actual {
+  color: #8b293c;
+  display: inline;
+}

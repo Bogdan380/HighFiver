@@ -1,0 +1,130 @@
+<div class="rewards-header">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="45"
+    height="45"
+    fill="currentColor"
+    class="bi bi-arrow-left-circle back"
+    viewBox="0 0 16 16"
+    (click)="goBack()"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+    />
+  </svg>
+  <span> Rewards Administration</span>
+</div>
+<div *ngIf="!inputFlag" class="reward_wrapper d-flex justify-content-center">
+  <img src="../../../assets/static/reward.png" class="reward" />
+</div>
+<div
+  *ngIf="!inputFlag"
+  class="button_wrapper d-flex justify-content-center"
+  [routerLink]="['/admin/all']"
+>
+  <div class="btn btn-success admin_buttons">View all awards</div>
+</div>
+<div *ngIf="!inputFlag" class="button_wrapper d-flex justify-content-center">
+  <div class="btn btn-success admin_buttons" (click)="inputFlag = true">
+    Add new award
+  </div>
+</div>
+<div *ngIf="error">
+  <h2 id="errorText" class="error_looks">{{ errorText }}</h2>
+</div>
+<div *ngIf="inputFlag" class="input_wrapper mb-5">
+  <div class="input_box">
+    <table class="input_table">
+      <tr>
+        <td class="input_name">Photo</td>
+        <td>
+          <input
+            type="file"
+            id="myFile"
+            name="filename"
+            accept=".png"
+            placeholder="Choose photo to upload"
+            (change)="onFileSelected($event)"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Award name</td>
+        <td>
+          <input
+            id="award_name"
+            type="text"
+            class="name_value_input"
+            maxlength="20"
+            [(ngModel)]="name"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Value</td>
+        <td>
+          <input
+            id="award_value"
+            type="number"
+            class="name_value_input"
+            min="1"
+            max="100"
+            [(ngModel)]="value"
+            step="0.01"
+            onkeydown="javascript: return ['Backspace','Delete','ArrowLeft','ArrowRight'].includes(event.code) ? true : !isNaN(Number(event.key)) && event.code!=='Space'"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">About award</td>
+        <td>
+          <textarea
+            id="award_desc"
+            type="text"
+            class="desc_input"
+            cols="90"
+            rows="4"
+            [(ngModel)]="description"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="input_name">Category</td>
+        <td>
+          <div class="dropdown">
+            <button
+              class="btn btn-primary dropdown-toggle"
+              type="button"
+              data-toggle="dropdown"
+            >
+              {{ categoryText }}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <span *ngFor="let filter of filters; let indexOfelement = index">
+                <li class="filter_item">
+                  <input
+                    id="{{ filter.name }}"
+                    type="radio"
+                    name="filter"
+                    value="{{ indexOfelement }}"
+                    (change)="onFilterChange($event)"
+                  />&nbsp;&nbsp;&nbsp;{{ filter.name }}
+                </li>
+              </span>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="button_row d-flex justify-content-center">
+    <div class="btn btn-outline-secondary" (click)="inputFlag = false">
+      Cancel
+    </div>
+    <div class="btn btn-success save_button" (click)="persistAward()">
+      Save changes
+    </div>
+  </div>
+</div>

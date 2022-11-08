@@ -1,0 +1,31 @@
+<div class="welcome_card">
+  <h2 class="welcome_text">Hello, {{ employee.name }}!</h2>
+</div>
+<div class="details_card">
+  <div>
+    Birthday:
+    <p class="actual">{{ employee.birthdate }}</p>
+  </div>
+  <div class="right_column">
+    Department:
+    <p class="actual">{{ employee.departmentName }}</p>
+  </div>
+
+  <div class="email">
+    E-mail:
+    <p class="actual">{{ employee.email }}</p>
+  </div>
+  <div class="right_column">
+    Title:
+    <p class="actual">{{ employee.role }}</p>
+  </div>
+
+  <div>
+    Hire Date:
+    <p class="actual">{{ employee.hiringDate }}</p>
+  </div>
+  <div class="right_column">
+    Reports to:
+    <p class="actual">{{ employee.managerName }}</p>
+  </div>
+</div>

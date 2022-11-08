@@ -1,0 +1,28 @@
+<div class="profile_card_wrapper">
+  <div class="profile_photo">
+    <img
+      [src]="imageUrl"
+      style="width: 100%; height: 100%; border-radius: 50%"
+      (error)="setDefaultPic()"
+    />
+  </div>
+  <div class="admin_text">ADMIN</div>
+  <div class="admin_credentials">
+    <p class="admin-name">{{ employee.name }}</p>
+    <p class="admin-role">{{ employee.role }}</p>
+  </div>
+</div>
+<div
+  class="btn btn-success admin_buttons"
+  [routerLink]="[route1]"
+  style="display: none"
+>
+  {{ name1 }}
+</div>
+<div
+  class="btn btn-success admin_buttons"
+  [routerLink]="[route2]"
+  style="display: none"
+>
+  {{ name2 }}
+</div>
